@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
+  padding:15;
   margin:0;
   font-family: "Roboto", sans-serif;
 }
@@ -57,7 +57,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
+  padding: 10px 5%;
 
 }
 
@@ -76,6 +76,7 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
+  padding: 25px;
 
 }
 
@@ -129,8 +130,9 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #333366;
 }
+
 
 .flex-box {
   display: -webkit-flex;
