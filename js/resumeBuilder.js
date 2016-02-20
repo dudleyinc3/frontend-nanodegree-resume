@@ -4,7 +4,10 @@ var role = "Front-End Developer";
 var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Developer");
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 4494a5e7bebf9e576022649580e3eb8ee31443dc
 
 var bio = {
 	"name": "John",
