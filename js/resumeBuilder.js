@@ -4,9 +4,6 @@ var role = "Front-End Developer";
 var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Developer");
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
-	
-//var skills = ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "];
-	//$("#main").append(skills);
 
 var bio = {
 	"name": "John",
@@ -21,7 +18,7 @@ var bio = {
 	"welcomeMessage": "Break the mould, live out loud!",
 	"skills": ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "],
 	"biopic": "http://enpundit.s3.amazonaws.com/wp-content/uploads/2011/12/luxury-bed-hi-can-3.jpg"
-};	/*display: function "taking no parameters"*/
+};	
 
 var formattedMobile = 
 	HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -34,10 +31,6 @@ var formattedEmail =
 var formattedgithub =
 	HTMLgithub.replace("%data%", bio.contacts.github);
 	$("#topContacts").append(formattedgithub);
-
-/*var formattedTwitter=
-	HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	$("#topContacts").append(formattedTwitter);*/
 
 var formattedLocation=
 	HTMLlocation.replace("%data%", bio.contacts.location);
@@ -249,11 +242,6 @@ var education = {
 }
 
 $("#education").append(HTMLonlineClasses);
-/*var formattedonlineTitle =
-	HTMLonlineTitle.replace("%data%", education.onlineCourses.title);
-	$("#education").append(formattedonlineCoursesTitle);
-var formattedonlineschool =
-	HTMLonlineSchool.replace("%data%", education.onlineCourses.school);*/
 
 for (course in education.onlineCourses) {
 		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
