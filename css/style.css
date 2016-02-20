@@ -22,7 +22,9 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  text-align: left;
 }
+
 
 h1 {
   font-size: 40px;
@@ -128,7 +130,6 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #333366;
 }
@@ -170,7 +171,6 @@ span {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {
