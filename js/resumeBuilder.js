@@ -108,27 +108,32 @@ var projects = {
 			"title": "SE ConstructionLLC",
 			"dates": "Jan 16'",
 			"description": "Customized WordPress template", 
-			"image": "images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg"			
+			"image": "images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg",
+			"link": "http://seconstructionllc.com/"			
 		},
 		{
 			"title": "SitehypeDesigns",
 			"dates": "Aug. 15'",
 			"description": "Customized WordPress template",
-			"image": "images/Screen Shot 2016-01-23 at 10.19.08 PM.png"
+			"image": "images/Screen Shot 2016-01-23 at 10.19.08 PM.png",
+			"link": "http://seconstructionllc.com/"
 		},
 		{
 			"title": "One Million Lines",
 			"dates": "June 15'",
 			"description": "Customized Bootstrap, mock site",
-			"image": "images/Screen Shot 2016-01-23 at 10.19.59 PM.png"
+			"image": "images/Screen Shot 2016-01-23 at 10.19.59 PM.png",
+			"link": "http://seconstructionllc.com/"
 		}
 	]
 }
 
-
+var formattedprojectLink =
+	HTMLprojectLink.replace("%data%", projects.project[0].link);
+	$("#projects").append(formattedprojectLink);
 var formattedprojectTitle =
 	HTMLprojectTitle.replace("%data%", projects.project[0].title);
-	$("#projects").append(formattedprojectTitle);
+	$("#projects a").append(formattedprojectTitle);
 var formattedprojectDates =
 	HTMLprojectDates.replace("%data%", projects.project[0].dates);
 	$("#projects").append(formattedprojectDates);
@@ -138,6 +143,9 @@ var formattedprojectDescription =
 var formattedprojectImage =
 	HTMLprojectImage.replace("%data%", projects.project[0].image);
 	$("#projects").append(formattedprojectImage);
+var formattedprojectLink =
+	HTMLprojectLink.replace("%data%", projects.project[0].link);
+	$("#projects").append(formattedprojectLink);
 
 
 var formattedprojectTitle =
