@@ -108,19 +108,19 @@ var projects = {
 			"title": "SE ConstructionLLC",
 			"dates": "Jan 16'",
 			"description": "Customized WordPress template", 
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg"			
+			"image": "images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg"			
 		},
 		{
 			"title": "SitehypeDesigns",
 			"dates": "Aug. 15'",
 			"description": "Customized WordPress template",
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.08 PM.png"
+			"image": "images/Screen Shot 2016-01-23 at 10.19.08 PM.png"
 		},
 		{
 			"title": "One Million Lines",
 			"dates": "June 15'",
 			"description": "Customized Bootstrap, mock site",
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.59 PM.png"
+			"image": "images/Screen Shot 2016-01-23 at 10.19.59 PM.png"
 		}
 	]
 }
