@@ -22,6 +22,7 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  text-align: left;
 }
 
 h1 {
@@ -129,6 +130,7 @@ a {
 }
 
 /* TODO: Replace with image later */
+
 #header {
   background-color: #333366;
 }

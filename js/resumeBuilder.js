@@ -17,11 +17,12 @@ var bio = {
 		"github": "dudleyinc3",
 		"twitter": "@dudleymusic",
 		"location": "San Clemente CA/Seattle WA"
-},
-	"welcomeMessage": "Break the mould, live out loud!",
-	"skills": ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "],
-	"biopic": "http://enpundit.s3.amazonaws.com/wp-content/uploads/2011/12/luxury-bed-hi-can-3.jpg"
-};	/*display: function "taking no parameters"*/
+	},
+		"welcomeMessage": "Break the mould, live out loud!",
+		"skills": ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "],
+		"biopic": "http://enpundit.s3.amazonaws.com/wp-content/uploads/2011/12/luxury-bed-hi-can-3.jpg"
+
+	};	/*display: function "taking no parameters"*/
 
 var formattedMobile = 
 	HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -107,20 +108,19 @@ var projects = {
 			"title": "SE ConstructionLLC",
 			"dates": "Jan 16'",
 			"description": "Customized WordPress template", 
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg"
-			
+			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/SE 2-Screen Shot 2016-01-23 at 10.18.23 PM.jpg"			
 		},
 		{
 			"title": "SitehypeDesigns",
 			"dates": "Aug. 15'",
 			"description": "Customized WordPress template",
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.08 PM.png",		
+			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.08 PM.png"
 		},
 		{
 			"title": "One Million Lines",
 			"dates": "June 15'",
 			"description": "Customized Bootstrap, mock site",
-			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.59 PM.png"		
+			"image": "file://localhost/Users/dudleymusic/Documents/backup/frontend-nanodegree-resume/images/Screen Shot 2016-01-23 at 10.19.59 PM.png"
 		}
 	]
 }
@@ -249,6 +249,7 @@ var education = {
 }
 
 $("#education").append(HTMLonlineClasses);
+
 /*var formattedonlineTitle =
 	HTMLonlineTitle.replace("%data%", education.onlineCourses.title);
 	$("#education").append(formattedonlineCoursesTitle);
@@ -256,17 +257,18 @@ var formattedonlineschool =
 	HTMLonlineSchool.replace("%data%", education.onlineCourses.school);*/
 
 for (course in education.onlineCourses) {
-		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-		var schoolTitle = onlineTitle + onlineSchool;
-		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates); 
-		var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url).replace("#data#", education.onlineCourses[course].url)
+	var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+	var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+	var schoolTitle = onlineTitle + onlineSchool;
+	var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates); 
+	var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url).replace("#data#", education.onlineCourses[course].url)
 
-		$("#education").append(HTMLschoolStart);
-		$(".education-entry:last").append(schoolTitle);
-		$(".education-entry:last").append(onlineDates);
-		$(".education-entry:last").append(onlineURL);
-	}
+	$("#education").append(HTMLschoolStart);
+	$(".education-entry:last").append(schoolTitle);
+	$(".education-entry:last").append(onlineDates);
+	$(".education-entry:last").append(onlineURL);
+}
+
 $(document).click(function(loc) {
   var x = loc.pageX;
   var y = loc.pageY;
@@ -294,22 +296,4 @@ $("#footerContacts").append(formattedMobile);
 $("#footerContacts").append(formattedEmail);
 $("#footerContacts").append(formattedgithub);
 $("#footerContacts").append(formattedLocation);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
