@@ -116,24 +116,26 @@ var projects = {
 			"dates": "Aug. 15'",
 			"description": "Customized WordPress template",
 			"image": "images/Screen Shot 2016-01-23 at 10.19.08 PM.png",
-			"link": "http://seconstructionllc.com/"
+			"link": "http://sitehypedesigns.com/"
 		},
 		{
 			"title": "One Million Lines",
 			"dates": "June 15'",
 			"description": "Customized Bootstrap, mock site",
 			"image": "images/Screen Shot 2016-01-23 at 10.19.59 PM.png",
-			"link": "http://seconstructionllc.com/"
+			"link": "https://github.com/dudleyinc3/million-lines" 
 		}
 	]
 }
+
+$("#projects").append(HTMLprojectStart);
 
 var formattedprojectLink =
 	HTMLprojectLink.replace("%data%", projects.project[0].link);
 	$("#projects").append(formattedprojectLink);
 var formattedprojectTitle =
 	HTMLprojectTitle.replace("%data%", projects.project[0].title);
-	$("#projects a").append(formattedprojectTitle);
+	$("#projects a:first").append(formattedprojectTitle);
 var formattedprojectDates =
 	HTMLprojectDates.replace("%data%", projects.project[0].dates);
 	$("#projects").append(formattedprojectDates);
@@ -143,14 +145,13 @@ var formattedprojectDescription =
 var formattedprojectImage =
 	HTMLprojectImage.replace("%data%", projects.project[0].image);
 	$("#projects").append(formattedprojectImage);
+
 var formattedprojectLink =
-	HTMLprojectLink.replace("%data%", projects.project[0].link);
+	HTMLprojectLink.replace("%data%", projects.project[1].link);
 	$("#projects").append(formattedprojectLink);
-
-
 var formattedprojectTitle =
 	HTMLprojectTitle.replace("%data%", projects.project[1].title);
-	$("#projects").append(formattedprojectTitle);
+	$("#projects a:nth-of-type(2)").append(formattedprojectTitle);
 var formattedprojectDates =
 	HTMLprojectDates.replace("%data%", projects.project[1].dates);
 	$("#projects").append(formattedprojectDates);
@@ -161,9 +162,12 @@ var formattedprojectImage =
 	HTMLprojectImage.replace("%data%", projects.project[1].image);
 	$("#projects").append(formattedprojectImage);
 
+var formattedprojectLink =
+	HTMLprojectLink.replace("%data%", projects.project[2].link);
+	$("#projects").append(formattedprojectLink);
 var	formattedprojectTitle =
 	HTMLprojectTitle.replace("%data%", projects.project[2].title);
-	$("#projects").append(formattedprojectTitle);
+	$("#projects a:nth-of-type(3)").append(formattedprojectTitle);
 var formattedprojectDates =
 	HTMLprojectDates.replace("%data%", projects.project[2].dates);
 	$("#projects").append(formattedprojectDates);
@@ -174,17 +178,72 @@ var formattedprojectImage =
 	HTMLprojectImage.replace("%data%", projects.project[2].image);
 	$("#projects").append(formattedprojectImage);
 
+// var education = {
+// 	"schools": 
+// 	{	
+// 		"name": "Udacity online",
+// 		"degree": "Front-End Developer",
+// 		"dates": "Nov. 15'-Current",
+// 		"location": "Mountain View, CA",
+// 		"major": "Web Developement",
+// 	}	
+// }
+// var formattedschoolName =
+// 	HTMLschoolName.replace("%data%", education.schools.name);
+// 	$("#education").append(formattedschoolName);
+// var formattedschoolDegree =
+// 	HTMLschoolDegree.replace("%data%", education.schools.degree);
+// 	$("#education").append(formattedschoolDegree);
+// var formattedschoolDates =
+// 	HTMLschoolDates.replace("%data%", education.schools.dates);
+// 	$("#education").append(formattedschoolDates);
+// var formattedschoolLocation =
+// 	HTMLschoolLocation.replace("%data%", education.schools.location);
+// 	$("#education").append(formattedschoolLocation);
+// var formattedschoolMajor =
+// 	HTMLschoolMajor.replace("%data%", education.schools.major);
+// 	$("#education").append(formattedschoolMajor);
+
 var education = {
-	"schools": 
-	{	
-		"name": "Udacity online",
-		"degree": "Front-End Developer",
-		"dates": "Nov. 15'-Current",
-		"location": "Mountain View, CA",
-		"major": "Web Developement",
-	}	
+	"schools": [
+		{
+			"name": "Mesa Community College",
+			"degree": "Associate/Fine Arts",
+			"dates": "Sept 12'-Dec 14'",
+			"location": "Mesa AZ",
+			"major": "Music/Performance",
+		},
+		{	
+			"name": "Udacity online",
+			"degree": "Front-End Developer",
+			"dates": "Nov. 15'-Current",
+			"location": "Mountain View, CA",
+			"major": "Web Developement",
+		}
+	]
+}	
+	
+/*New Section Attempt*/
+
+$("#education").append(HTMLphysicalClasses);	
+
+for (course in education.schools) {
+	var schoolName = HTMLschoolName.replace("%data%", education.schools[course].name);
+	console.log(schoolName);
+	var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[course].degree);
+	var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[course].major)
+	var schoolDates = HTMLschoolDates.replace("%data%", education.schools[course].dates); 
+	var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[course].location);
+
+	$("#education").append(HTMLschoolStart);
+	$(".education-entry:last").append(schoolName);
+	$(".education-entry:last").append(schoolDegree);
+	$(".education-entry:last").append(schoolDates);
+	$(".education-entry:last").append(schoolLocation);
+	$(".education-entry:last").append(schoolMajor);
 }
-var formattedschoolName =
+
+/*var formattedschoolName =
 	HTMLschoolName.replace("%data%", education.schools.name);
 	$("#education").append(formattedschoolName);
 var formattedschoolDegree =
@@ -198,34 +257,7 @@ var formattedschoolLocation =
 	$("#education").append(formattedschoolLocation);
 var formattedschoolMajor =
 	HTMLschoolMajor.replace("%data%", education.schools.major);
-	$("#education").append(formattedschoolMajor);
-
-var education = {
-	"schools":
-	{
-		"name": "Mesa Community College",
-		"degree": "Associate/Fine Arts",
-		"dates": "Sept 12'-Dec 14'",
-		"location": "Mesa AZ",
-		"major": "Music/Performance",
-	}
-}		
-
-var formattedschoolName =
-	HTMLschoolName.replace("%data%", education.schools.name);
-	$("#education").append(formattedschoolName);
-var formattedschoolDegree =
-	HTMLschoolDegree.replace("%data%", education.schools.degree);
-	$("#education").append(formattedschoolDegree);
-var formattedschoolDates =
-	HTMLschoolDates.replace("%data%", education.schools.dates);
-	$("#education").append(formattedschoolDates);
-var formattedschoolLocation =
-	HTMLschoolLocation.replace("%data%", education.schools.location);
-	$("#education").append(formattedschoolLocation);
-var formattedschoolMajor =
-	HTMLschoolMajor.replace("%data%", education.schools.major);
-	$("#education").append(formattedschoolMajor);
+	$("#education").append(formattedschoolMajor);*/
 
 var education = {
 	"onlineCourses": [
@@ -304,4 +336,3 @@ $("#footerContacts").append(formattedMobile);
 $("#footerContacts").append(formattedEmail);
 $("#footerContacts").append(formattedgithub);
 $("#footerContacts").append(formattedLocation);
-

@@ -31,24 +31,25 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkTitle = ' - %data%';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectLink = '<a href="%data%">';
+var HTMLprojectLink = '<a href="%data%" class="project-link" target="_blank">';
 var HTMLprojectTitle = '%data%';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
+var HTMLphysicalClasses = '<h3>Physical Classes</h3>';
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolName = '<a href="#">%data%</a>';
+var HTMLschoolDegree = '%data%';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<div class="major-text">%data%</div>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
@@ -85,11 +86,10 @@ function logClicks(x,y) {
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
+
 $(document).click(function(loc) {
-  // your code goes here!
+  //logClicks(loc.pageX, loc.pageY)
 });
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
@@ -133,9 +133,9 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide: 
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    /*education.schools.forEach(function(school){
-      locations.push(school.location);
-    });*/
+    //education.schools.forEach(function(school){
+    //  locations.push(school.location);
+    // });
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
