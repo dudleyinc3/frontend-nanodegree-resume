@@ -5,7 +5,7 @@ var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Developer");
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
 	
-//var skills = ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "];
+var skills = ["HTML ", "CSS ", "JavaScript/JQuery ", "WordPress "];
 	//$("#main").append(skills);
 
 var bio = {
@@ -128,7 +128,30 @@ var projects = {
 	]
 }
 
-$("#projects").append(HTMLprojectStart);
+projects.display = function(){
+
+
+for (var project in projects.project) {
+	var projectTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
+	var projectDates = HTMLprojectDates.replace("%data%", projects.project[project].dates);
+	var projectDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description); 
+	var projectImage = HTMLprojectImage.replace("%data%", projects.project[project].image);
+    var projectLink = HTMLprojectLink.replace("%data%", projects.project[project].link);
+    
+      
+
+    $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(projectTitle);
+    $(".project-entry:last").append(projectDates);
+    $(".project-entry:last").append(projectDescription);
+    $(".project-entry:last").append(projectImage);
+    $(".project-entry:last").append(projectLink);
+    }
+        
+}
+projects.display();
+
+/*$("#projects").append(HTMLprojectStart);
 
 var formattedprojectLink =
 	HTMLprojectLink.replace("%data%", projects.project[0].link);
@@ -176,7 +199,8 @@ var formattedprojectDescription =
 	$("#projects").append(formattedprojectDescription);
 var formattedprojectImage =
 	HTMLprojectImage.replace("%data%", projects.project[2].image);
-	$("#projects").append(formattedprojectImage);
+	$("#projects").append(formattedprojectImage);*/
+
 
 // var education = {
 // 	"schools": 
@@ -231,7 +255,7 @@ for (course in education.schools) {
 	var schoolName = HTMLschoolName.replace("%data%", education.schools[course].name);
 	console.log(schoolName);
 	var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[course].degree);
-	var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[course].major)
+	var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[course].major);
 	var schoolDates = HTMLschoolDates.replace("%data%", education.schools[course].dates); 
 	var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[course].location);
 
