@@ -64,6 +64,7 @@ for (var i = 0; i < bio.skills.length; i++) {
 var work = {
 	"jobs": [
 	{
+		"link": "http://sitehypedesigns.com",
 		"workEmployer": "SitehypeDesigns",
 		"workTitle": "Jr. Developer",
 		"workDates": "Sept. 15'-Current",
@@ -74,6 +75,7 @@ var work = {
 }
 
 for (job in work.jobs) {
+	var workLink = HTMLworkLink.replace("%data%", work.jobs[job].link);
 	var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].workEmployer);
 	var workTitle = HTMLworkTitle.replace("%data%", work.jobs[job].workTitle);
 	var workDates = HTMLworkDates.replace("%data%", work.jobs[job].workDates);
@@ -81,6 +83,8 @@ for (job in work.jobs) {
 	var workDescription = HTMLworkDescription.replace("%data%", work.jobs[job].workDescription);
 
 	$("#workExperience").append(HTMLworkStart);
+	$(".work-entry:last").append(workLink);
+	$(".work-entry:last.work-link").append(workEmployer);
 	$(".work-entry:last").append(workEmployer);
 	$(".work-entry:last").append(workTitle);
 	$(".work-entry:last").append(workDates);
@@ -143,28 +147,28 @@ var projects = {
 	]
 }
 
-projects.display = function(){
+//projects.display = function(){
 
 
-for (var project in projects.project) {
+for (project in projects.project) {
+	var projectLink = HTMLprojectLink.replace("%data%", projects.project[project].link);
 	var projectTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
 	var projectDates = HTMLprojectDates.replace("%data%", projects.project[project].dates);
 	var projectDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description); 
 	var projectImage = HTMLprojectImage.replace("%data%", projects.project[project].image);
-    var projectLink = HTMLprojectLink.replace("%data%", projects.project[project].link);
+    
     
       
 
     $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(projectLink);
+    $(".project-entry:last.project-link").append(projectTitle);
     $(".project-entry:last").append(projectTitle);
     $(".project-entry:last").append(projectDates);
     $(".project-entry:last").append(projectDescription);
     $(".project-entry:last").append(projectImage);
-    $(".project-entry:last").append(projectLink);
     }
-        
-}
-projects.display();
+//projects.display();
 
 /*$("#projects").append(HTMLprojectStart);
 
@@ -246,6 +250,7 @@ var formattedprojectImage =
 var education = {
 	"schools": [
 		{
+			"link": "https://www.mesacc.edu",
 			"name": "Mesa Community College",
 			"degree": "Associate/Fine Arts",
 			"dates": "Sept 12'-Dec 14'",
@@ -253,6 +258,7 @@ var education = {
 			"major": "Music/Performance",
 		},
 		{	
+			"link": "https://www.udacity.com",
 			"name": "Udacity online",
 			"degree": "Front-End Developer",
 			"dates": "Nov. 15'-Current",
@@ -267,14 +273,16 @@ var education = {
 $("#education").append(HTMLphysicalClasses);	
 
 for (course in education.schools) {
+	var schoolLink = HTMLschoolLink.replace("%data%", education.schools[course].link);
 	var schoolName = HTMLschoolName.replace("%data%", education.schools[course].name);
-	console.log(schoolName);
 	var schoolDegree = HTMLschoolDegree.replace("%data%", education.schools[course].degree);
 	var schoolMajor = HTMLschoolMajor.replace("%data%", education.schools[course].major);
 	var schoolDates = HTMLschoolDates.replace("%data%", education.schools[course].dates); 
 	var schoolLocation = HTMLschoolLocation.replace("%data%", education.schools[course].location);
 
 	$("#education").append(HTMLschoolStart);
+	$(".education-entry:last").append(schoolLink);
+	$(".education-entry:last.schools-link").append(schoolName);
 	$(".education-entry:last").append(schoolName);
 	$(".education-entry:last").append(schoolDegree);
 	$(".education-entry:last").append(schoolDates);
@@ -322,7 +330,7 @@ var education = {
 			"title": "Fundamentals of Web Developement",
 			"school": "Lynda",
 			"dates": "Feb 15'- March 15'",
-			"url": "Lynda.com"
+			"url": "https://www.lynda.com"
 		}
 	]
 }

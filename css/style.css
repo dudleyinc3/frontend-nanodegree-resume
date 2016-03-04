@@ -25,6 +25,17 @@ h6 {
   text-align: left;
 }
 
+/*a.work-entry{
+  text-align: left;
+  padding-left: 0px;
+}*/
+
+a.work-entry, a.project-entry, a.education-entry{
+  text-align: left;
+  padding-left: 0px;
+}
+
+
 h1 {
   font-size: 40px;
   color: #f5a623;
