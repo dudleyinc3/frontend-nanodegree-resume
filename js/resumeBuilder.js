@@ -285,9 +285,10 @@ for (course in education.schools) {
 	$(".education-entry:last.schools-link").append(schoolName);
 	$(".education-entry:last").append(schoolName);
 	$(".education-entry:last").append(schoolDegree);
+	$(".education-entry:last").append(schoolMajor);
 	$(".education-entry:last").append(schoolDates);
 	$(".education-entry:last").append(schoolLocation);
-	$(".education-entry:last").append(schoolMajor);
+	
 }
 
 /*var formattedschoolName =
@@ -348,12 +349,14 @@ for (course in education.onlineCourses) {
 	var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 	var schoolTitle = onlineTitle + onlineSchool;
 	var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates); 
-	var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url).replace("#data#", education.onlineCourses[course].url)
+	var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 
 	$("#education").append(HTMLschoolStart);
+	$(".education-entry:last").append(onlineURL);
+	$(".education-entry:last.online-url").append(schoolTitle);
 	$(".education-entry:last").append(schoolTitle);
 	$(".education-entry:last").append(onlineDates);
-	$(".education-entry:last").append(onlineURL);
+	
 }
 
 $(document).click(function(loc) {

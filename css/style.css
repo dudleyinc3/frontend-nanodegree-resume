@@ -33,6 +33,7 @@ h6 {
 a.work-entry, a.project-entry, a.education-entry{
   text-align: left;
   padding-left: 0px;
+  padding-bottom: 5px;
 }
 
 
@@ -96,13 +97,13 @@ h5 {
 p {
   font-size: 15px;
   color: #333;
-  line-height: 13px;
+  line-height: 10px;
 }
 
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 0px;
   display: block;
 }
 
@@ -154,7 +155,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 30px;
 }
 
 .center-content {
@@ -173,7 +174,8 @@ ul {
 }
 
 img {
-  padding: 0px;
+  padding-top: 5px;
+  padding-right: 30px;
 }
 
 span {
