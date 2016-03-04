@@ -73,6 +73,21 @@ var work = {
 	]
 }
 
+for (job in work.jobs) {
+	var workEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].workEmployer);
+	var workTitle = HTMLworkTitle.replace("%data%", work.jobs[job].workTitle);
+	var workDates = HTMLworkDates.replace("%data%", work.jobs[job].workDates);
+	var workLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location); 
+	var workDescription = HTMLworkDescription.replace("%data%", work.jobs[job].workDescription);
+
+	$("#workExperience").append(HTMLworkStart);
+	$(".work-entry:last").append(workEmployer);
+	$(".work-entry:last").append(workTitle);
+	$(".work-entry:last").append(workDates);
+	$(".work-entry:last").append(workLocation);
+	$(".work-entry:last").append(workDescription);
+}
+
 function locationizer(work_obj) {
 	var locationArray = [];
 
@@ -84,7 +99,7 @@ function locationizer(work_obj) {
 }
 
 
-var formattedworkEmployer =
+/*var formattedworkEmployer =
 	HTMLworkEmployer.replace("%data%", work.jobs[0].workEmployer);
 	$("#workExperience").append(formattedworkEmployer);
 var formattedworkTitle =
@@ -99,7 +114,7 @@ var formattedworkLocation =
 var formattedworkDescription =
 	HTMLworkDescription.replace("%data%", work.jobs[0].workDescription);
 	$("#workExperience").append(formattedworkDescription);
-
+*/
 
 
 var projects = {

@@ -83,9 +83,9 @@ h5 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
-  line-height: 21px;
+  line-height: 13px;
 }
 
 a {
@@ -162,7 +162,7 @@ ul {
 }
 
 img {
-  padding: 10px;
+  padding: 0px;
 }
 
 span {
