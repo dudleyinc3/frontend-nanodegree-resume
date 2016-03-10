@@ -31,7 +31,7 @@ var HTMLworkLink = '<a href="%data%" class="work-entry" target="_blank">';
 
 var HTMLworkEmployer = "%data%";
 
-var HTMLworkTitle = " - %data%";
+var HTMLworkTitle = "  %data%";
 
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 
